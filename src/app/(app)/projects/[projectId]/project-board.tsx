@@ -50,6 +50,7 @@ import {
   Select,
   Textarea,
 } from "@/components/ui";
+import { playTaskDoneSound } from "@/lib/sounds";
 import { createClient } from "@/lib/supabase/client";
 import type { ActionResult, List, Member, Task } from "@/lib/types";
 import {
@@ -746,6 +747,7 @@ function TaskCard({ task }: { task: Task }) {
   const due = dueStatus(task.due_date, task.done);
 
   function toggle() {
+    if (!task.done) playTaskDoneSound();
     run({ type: "updateTask", id: task.id, patch: { done: !task.done } }, () =>
       setTaskDone(task.id, !task.done),
     );

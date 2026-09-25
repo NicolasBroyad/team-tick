@@ -217,7 +217,7 @@ function InviteRow({ invite }: { invite: Invite }) {
           value={url}
           aria-label="Link de invitación"
           onFocus={(event) => event.currentTarget.select()}
-          className="font-mono text-xs"
+          className="font-mono sm:text-xs"
         />
         <Button variant="secondary" onClick={copy} className="shrink-0">
           {copied ? (

@@ -78,8 +78,10 @@ export function IconButton({
   );
 }
 
+// En celular los campos usan 16px: con menos, iOS hace zoom al enfocarlos
+// (y el zoom queda puesto al navegar dentro de la app).
 const FIELD =
-  "w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 placeholder:text-zinc-400 shadow-xs outline-none transition focus:border-emerald-500 focus:ring-3 focus:ring-emerald-500/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-500";
+  "w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-base sm:text-sm text-zinc-900 placeholder:text-zinc-400 shadow-xs outline-none transition focus:border-emerald-500 focus:ring-3 focus:ring-emerald-500/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-500";
 
 export function Input({
   className,

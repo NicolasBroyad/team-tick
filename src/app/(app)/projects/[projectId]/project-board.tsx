@@ -603,7 +603,7 @@ function RenameInput({
         if (event.key === "Enter") finish(event.currentTarget.value);
         if (event.key === "Escape") finish(null);
       }}
-      className="h-8 min-w-0 flex-1 rounded-md border border-emerald-500 bg-white px-2 text-sm font-semibold outline-none ring-3 ring-emerald-500/20 dark:bg-zinc-900"
+      className="h-8 min-w-0 flex-1 rounded-md border border-emerald-500 bg-white px-2 text-base font-semibold sm:text-sm outline-none ring-3 ring-emerald-500/20 dark:bg-zinc-900"
     />
   );
 }
@@ -728,7 +728,7 @@ function AddTaskForm({ list }: { list: List }) {
           maxLength={500}
           placeholder="Agregar tarea"
           aria-label={`Agregar tarea a ${list.name}`}
-          className="min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-zinc-400 dark:placeholder:text-zinc-500"
+          className="min-w-0 flex-1 bg-transparent text-base outline-none sm:text-sm placeholder:text-zinc-400 dark:placeholder:text-zinc-500"
         />
       </label>
       {title.trim() && (
